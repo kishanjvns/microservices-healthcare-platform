@@ -88,35 +88,7 @@ This platform consists of two independent microservices:
 
 The Appointment Service validates member entities by making HTTP requests to the Member Service:
 
-```
-┌─────────────────────┐                    ┌─────────────────────┐
-│  Appointment Service│                    │   Member Service    │
-│    (FastAPI)        │                    │   (Spring Boot)     │
-└──────────┬──────────┘                    └──────────┬──────────┘
-           │                                           │
-           │  1. Create Appointment Request            │
-           │     {doctor_id, patient_id, ...}          │
-           │                                           │
-           │  2. Validate Doctor                       │
-           ├──────────────────────────────────────────►│
-           │   GET /api/v1/doctor/{doctor_id}          │
-           │                                           │
-           │  3. Doctor Details Response               │
-           │◄──────────────────────────────────────────┤
-           │   {id, name, specialization, ...}         │
-           │                                           │
-           │  4. Validate Patient                      │
-           ├──────────────────────────────────────────►│
-           │   GET /api/v1/patient/{patient_id}        │
-           │                                           │
-           │  5. Patient Details Response              │
-           │◄──────────────────────────────────────────┤
-           │   {id, name, contact, ...}                │
-           │                                           │
-           │  6. Save Appointment (if valid)           │
-           │                                           │
-           ▼                                           │
-```
+
 
 ### Key Communication Details:
 
