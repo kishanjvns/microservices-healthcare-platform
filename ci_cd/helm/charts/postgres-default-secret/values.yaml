@@ -1,0 +1,4 @@
+rootPassword: rootPassword123
+appointmentDbPassword: appointment123
+memberDbPassword: member123
+notificationDbPassword: notification123
