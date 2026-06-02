@@ -1,0 +1,15 @@
+global:
+  postgresql:
+    auth:
+      existingSecret: postgres-default-secret
+      secretKeys:
+        adminPasswordKey: postgres-password
+        userPasswordKey: notification-mgmt-password
+      username: member_user
+      database: member_db
+      password: Password1
+    image:
+      tag: 18.2.0
+primary:
+  persistence:
+    enabled: false

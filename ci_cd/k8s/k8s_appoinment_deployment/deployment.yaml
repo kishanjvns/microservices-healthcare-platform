@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appointment-mgmt-deployment
+  labels:
+    app: appointment-mgmt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appointment-mgmt
+  template:
+    metadata:
+      labels:
+        app: appointment-mgmt
+    spec:
+      containers:
+      - name: appointment-mgmt-container
+        image: kjvns/appointment-mgmt:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: appointment-mgmt-config
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+          requests:
+            memory: "512Mi"
+            cpu: "500m"

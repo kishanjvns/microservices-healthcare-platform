@@ -1,0 +1,12 @@
+apiVersion: v2
+name: db-postgres-notification-mgmt
+description: A Helm chart for PostgreSQL database for Notification Management Service
+type: application
+version: 0.1.0
+appVersion: "18.2.0"
+keywords:
+  - notification-mgmt-db
+dependencies:
+  - name: postgresql
+    version: "18.2.3"
+    repository: "oci://registry-1.docker.io/bitnamicharts"

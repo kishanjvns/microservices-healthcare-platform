@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: appointment-mgmt-config
+data:
+  APP_NAME: "AppointmentMgmt"
+  APP_ENV: "dev"
+  SERVICE_PORT: "8080"
+  DATABASE_URL: "sqlite+aiosqlite:///:memory:"
+  LOG_LEVEL: "INFO"
+  API_PREFIX: "/api/v1"
+  DATABASE_ECHO: "False"
+  EXTERNAL_SERVICE_MEMBER_URL: "http://member-mgmt-service:80"

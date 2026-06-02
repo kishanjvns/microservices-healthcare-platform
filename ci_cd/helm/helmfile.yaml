@@ -1,0 +1,25 @@
+releases:
+  - name: postgres-default-secret
+    namespace: default
+    chart: ./charts/postgres-default-secret
+    values:
+      - ./charts/postgres-default-secret/values.yaml
+
+  - name: db-postgres-appointment-mgmt
+    namespace: default
+    chart: ./charts/db-postgres-appointment-mgmt
+    values:
+      - ./charts/db-postgres-appointment-mgmt/values.yaml
+  
+  - name: db-postgres-member-mgmt
+    namespace: default
+    chart: ./charts/db-postgres-member-mgmt
+    values:
+      - ./charts/db-postgres-member-mgmt/values.yaml
+
+  - name: db-postgres-notification-mgmt
+    namespace: default
+    chart: ./charts/db-postgres-notification-mgmt
+    values:
+      - ./charts/db-postgres-notification-mgmt/values.yaml
+    

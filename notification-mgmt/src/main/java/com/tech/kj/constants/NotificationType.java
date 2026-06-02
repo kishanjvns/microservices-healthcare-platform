@@ -1,0 +1,9 @@
+package com.tech.kj.constants;
+
+public enum NotificationType {
+    APPOINTMENT_CREATED,
+    APPOINTMENT_RESCHEDULED,
+    APPOINTMENT_IN_PROGRESS,
+    APPOINTMENT_COMPLETED,
+    APPOINTMENT_CANCELLED
+}
